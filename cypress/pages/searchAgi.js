@@ -39,7 +39,7 @@ class realizaPesquisa {
 
     resultadoPesquisaVazia(){
         cy.get(searchElements.RESULT_TITLE).should('have.text', 'Resultados da busca por: ')
-        cy.get(searchElements.SEARCH_EMPTY_RESULTS).invoke('text').should('contain', monthYearNow);
+        cy.get(searchElements.SEARCH_RESULTS).should('contain', monthYearNow);
     }
 }
 
